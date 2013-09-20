@@ -7,7 +7,6 @@ REBOL [
 str1: "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"
 str2: "nopqrstuvwxyzabcdefghijklmNOPQRSTUVWXYZABCDEFGHIJKLM"
 rot13: func [ char ] [
-
     either found? find str1 char [ return pick str2 index? find/case str1 char ][ return
     char ]
 ]
